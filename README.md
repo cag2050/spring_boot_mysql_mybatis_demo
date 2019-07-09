@@ -16,7 +16,7 @@ $ docker pull mysql:8.0.13
 ```
 2.创建一个 mysql 容器
 ```
-$ docker run --name mysql_test -e MYSQL_ROOT_PASSWORD=root -d mysql:8.0.13
+$ docker run --name mysql_test -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 -d mysql:8.0.13
 ```
 3.查看 mysql 容器的相关信息
 ```
