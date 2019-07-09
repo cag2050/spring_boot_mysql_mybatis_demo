@@ -50,3 +50,22 @@ mysql> use mysql_test;
 ```
 mysql> status;
 ```
+5.创建 users 表
+```
+mysql> CREATE TABLE `users` (
+         `id` bigint(20)  AUTO_INCREMENT    NOT NULL COMMENT '主键id',
+         `userName` varchar(32)  DEFAULT '' NOT NULL COMMENT '用户名',
+         `passWord` varchar(32)  DEFAULT '' NOT NULL COMMENT '密码',
+         `user_sex` varchar(32)  DEFAULT '' NOT NULL COMMENT '性别',
+         `nick_name` varchar(32) DEFAULT '' NOT NULL COMMENT '昵称',
+         PRIMARY KEY (`id`)
+       ) ENGINE=InnoDB AUTO_INCREMENT=28;
+```
+6.查看 users 表信息
+```
+mysql> desc users;
+```
+7.查看 users 表的建表语句
+```
+mysql> show create table users\G
+```
