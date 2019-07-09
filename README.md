@@ -69,3 +69,10 @@ mysql> desc users;
 ```
 mysql> show create table users\G
 ```
+8.查询 users 表
+```
+mysql> select * from users;
+```
+
+
+* 参考：http://www.ityouknow.com/springboot/2016/11/06/spring-boot-mybatis.html
