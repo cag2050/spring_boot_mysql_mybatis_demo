@@ -1,15 +1,18 @@
-### Spring Boot 使用 MyBatis 例子
+* Spring Boot 使用 MyBatis 例子
 
-* 使用 Spring Initializr 创建此 Spring Boot 项目时，Dependencies 选择了：
+### 步骤一：创建项目
+一、构建工具选择：maven 
+
+二、使用 Spring Initializr 创建此 Spring Boot 项目时，Dependencies 选择了：
 1. Spring Boot DevTools
 2. Spring Web Starter
 3. MySQL Driver
 4. JDBC API
 5. MyBatis Framework
 
-* maven 构建
 
-### mysql 的 docker 镜像使用
+
+### 步骤二：mysql 的 docker 镜像使用
 1.下载镜像：
 ```
 $ docker pull mysql:8.0.13
@@ -33,7 +36,7 @@ $ mysql -u root -p
 6.即可进行 mysql 数据库的管理工作
 * 出处：https://hub.docker.com/_/mysql
 
-### 数据库管理工作
+### 步骤三：数据库管理工作
 1.查看有几个数据库
 ```
 mysql> show databases;
@@ -74,5 +77,8 @@ mysql> show create table users\G
 mysql> select * from users;
 ```
 
+### 步骤四：启动项目，访问接口
+1. 双击：maven->Plugins->spring-boot->spring-boot:run
+2. 访问首页及各地址：http://localhost:8080/
 
 * 参考：http://www.ityouknow.com/springboot/2016/11/06/spring-boot-mybatis.html
