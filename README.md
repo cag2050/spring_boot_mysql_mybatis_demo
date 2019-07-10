@@ -45,15 +45,19 @@ mysql> show databases;
 ```
 mysql> create database mysql_test;
 ```
-3.切换到某个数据库
+3.查看数据库 mysql_test 的建库语句
+```
+mysql> show create database mysql_test\G
+```
+4.切换到某个数据库
 ```
 mysql> use mysql_test;
 ```
-4.查看数据库相关信息
+5.查看数据库相关信息
 ```
 mysql> status;
 ```
-5.创建 users 表
+6.创建 users 表
 ```
 mysql> CREATE TABLE `users` (
          `id` bigint(20)  AUTO_INCREMENT    NOT NULL COMMENT '主键id',
@@ -64,15 +68,15 @@ mysql> CREATE TABLE `users` (
          PRIMARY KEY (`id`)
        ) ENGINE=InnoDB AUTO_INCREMENT=28;
 ```
-6.查看 users 表信息
+7.查看 users 表信息
 ```
 mysql> desc users;
 ```
-7.查看 users 表的建表语句
+8.查看 users 表的建表语句
 ```
 mysql> show create table users\G
 ```
-8.查询 users 表
+9.查询 users 表
 ```
 mysql> select * from users;
 ```
