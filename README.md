@@ -19,15 +19,15 @@ $ docker pull mysql:8.0.13
 ```
 2.创建一个 mysql 容器
 ```
-$ docker run --name mysql_test -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 -d mysql:8.0.13
+$ docker run -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 -d mysql:8.0.13
 ```
-3.查看 mysql 容器的相关信息
+3.查看 mysql 容器的相关信息，会看到容器id、容器name
 ```
 $ docker ps
 ```
-4.进入创建的 mysql 容器的 bash，容器名字为第2步骤配置的：mysql_test
+4.进入创建的 mysql 容器的 bash，容器id或name为第3步骤看到的
 ```
-$ docker exec -it mysql_test bash
+$ docker exec -it yourContainerId或yourContainerName bash
 ```
 5.进入 mysql 命令行，会提示输入 root 用户的密码（即第2步骤配置的：root）
 ```
