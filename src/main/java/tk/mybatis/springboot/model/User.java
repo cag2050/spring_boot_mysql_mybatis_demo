@@ -1,8 +1,8 @@
 package tk.mybatis.springboot.model;
 
-import java.io.Serializable;
-
 import tk.mybatis.springboot.enums.UserSexEnum;
+
+import java.io.Serializable;
 
 public class User implements Serializable {
 
@@ -67,7 +67,7 @@ public class User implements Serializable {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "userName " + this.userName + ", pasword " + this.passWord + "sex " + userSex.name();
+		return "{id: " + this.id + ", userName: " + this.userName + ", passWord: " + this.passWord + ", userSex: " + userSex.name() + ", nickName: " + this.nickName + "}";
 	}
 
 }

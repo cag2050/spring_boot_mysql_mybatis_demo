@@ -85,4 +85,6 @@ mysql> select * from users;
 1. 双击：maven->Plugins->spring-boot->spring-boot:run
 2. 访问首页及各地址：http://localhost:8080/
 
-* 参考：http://www.ityouknow.com/springboot/2016/11/06/spring-boot-mybatis.html
+* 参考：
+1. Spring Boot(六)：如何优雅的使用 Mybatis：http://www.ityouknow.com/springboot/2016/11/06/spring-boot-mybatis.html
+2. github代码网址：https://github.com/ityouknow/spring-boot-examples/tree/master/spring-boot-mybatis/spring-boot-mybatis-xml
