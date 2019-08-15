@@ -81,12 +81,16 @@ mysql> show create table users\G
 mysql> select * from users;
 ```
 
-### 步骤四：启动项目，访问接口
+### 步骤四：开发过程中的单元测试
+1. 执行 src/test/java/tk/mybatis/springboot/controller/UserControllerTest
+.java、src/test/java/tk/mybatis/springboot/mapper/UserMapperTest.java 中的测试用例
+
+### 步骤五：启动项目，访问接口
 1. 双击：maven->Plugins->spring-boot->spring-boot:run
 2. 访问首页及各地址：http://localhost:8080/
 
-* 参考：
-1. Spring Boot(六)：如何优雅的使用 Mybatis(使用博客上的：极简 xml 版本)：http://www.ityouknow.com/springboot/2016/11/06/spring-boot-mybatis.html
-2. github代码网址(使用博客上的：极简 xml 版本)：https://github.com/ityouknow/spring-boot-examples/tree/master/spring-boot-mybatis/spring
+> 参考：
+> 1. Spring Boot(六)：如何优雅的使用 Mybatis(使用博客上的：极简 xml 版本)：http://www.ityouknow.com/springboot/2016/11/06/spring-boot-mybatis.html
+> 2. github代码网址(使用博客上的：极简 xml 版本)：https://github.com/ityouknow/spring-boot-examples/tree/master/spring-boot-mybatis/spring
 -boot-mybatis
 -xml
