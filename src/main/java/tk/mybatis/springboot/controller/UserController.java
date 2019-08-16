@@ -13,29 +13,29 @@ public class UserController {
     @Autowired
     private UserMapper userMapper;
 
-    @RequestMapping(value = "/getUsers", method = RequestMethod.POST)
+    @PostMapping("/getUsers")
     public List<User> getUsers() {
         List<User> users = userMapper.getAll();
         return users;
     }
 
-    @RequestMapping(value = "/getUser", method = RequestMethod.POST)
+    @PostMapping("/getUser")
     public User getUser(@RequestParam Long id) {
         User user = userMapper.getOne(id);
         return user;
     }
 
-    @RequestMapping(value = "/add", method = RequestMethod.POST)
+    @PostMapping("/add")
     public void save(@RequestBody User user) {
         userMapper.insert(user);
     }
 
-    @RequestMapping(value = "update", method = RequestMethod.POST)
+    @PostMapping("/update")
     public void update(@RequestBody User user) {
         userMapper.update(user);
     }
 
-    @RequestMapping(value = "/delete/{id}", method = RequestMethod.POST)
+    @PostMapping("/delete/{id}")
     public void delete(@PathVariable("id") Long id) {
         userMapper.delete(id);
     }
