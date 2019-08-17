@@ -86,8 +86,16 @@ mysql> select * from users;
 .java、src/test/java/tk/mybatis/springboot/mapper/UserMapperTest.java 中的测试用例
 
 ### 步骤五：启动项目，访问接口
-1. 双击：maven->Plugins->spring-boot->spring-boot:run
+1. 运行：src/main/java/tk/mybatis/springboot/SpringbootApplication.java，或双击：maven->Plugins->spring-boot->spring-boot:run
 2. 访问首页及各地址：http://localhost:8080/
+
+### 步骤六：配置 Swagger 接口文档，并在 swagger-ui 上测试接口
+1. 参考：http://blog.didispace.com/springbootswagger2/
+2. 访问 swagger-ui：http://localhost:8080/swagger-ui.html
+
+### 步骤七：配置 devTools
+1. 参考：https://www.cnblogs.com/cag2050/p/7884745.html
+
 
 > 参考：
 > 1. Spring Boot(六)：如何优雅的使用 Mybatis(使用博客上的：极简 xml 版本)：http://www.ityouknow.com/springboot/2016/11/06/spring-boot-mybatis.html

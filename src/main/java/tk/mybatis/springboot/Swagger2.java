@@ -27,9 +27,9 @@ public class Swagger2 {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("Spring Boot中使用Swagger2构建RESTful APIs")
-                .description("更多Spring Boot相关文章请关注：http://blog.didispace.com/")
-                .termsOfServiceUrl("http://blog.didispace.com/")
-                .contact("程序猿DD")
+                .description("Spring Boot相关")
+                .termsOfServiceUrl("https://github.com/cag2050/spring_boot_mysql_mybatis_demo")
+                .contact("Chen AnGuo")
                 .version("1.0")
                 .build();
     }
