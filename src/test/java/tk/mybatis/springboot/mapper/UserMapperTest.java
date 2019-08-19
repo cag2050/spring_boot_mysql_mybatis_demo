@@ -32,11 +32,18 @@ public class UserMapperTest {
 
     @Test
     public void testQuery() throws Exception {
+        // 2次查询getAll，测试是否已经开启 mybatis 一级缓存
         List<User> users = userMapper.getAll();
         if (users == null || users.size() == 0) {
             System.out.println("is null");
         } else {
             System.out.println(users.toString());
+        }
+        List<User> users2 = userMapper.getAll();
+        if (users2 == null || users2.size() == 0) {
+            System.out.println("is null");
+        } else {
+            System.out.println(users2.toString());
         }
     }
 
