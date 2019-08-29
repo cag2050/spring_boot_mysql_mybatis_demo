@@ -1,5 +1,7 @@
 package tk.mybatis.springboot.controller;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import tk.mybatis.springboot.mapper.UserMapper;
@@ -13,8 +15,11 @@ public class UserController {
     @Autowired
     private UserMapper userMapper;
 
+    private Log log = LogFactory.getLog(UserController.class);
+
     @PostMapping("/getUsers")
     public List<User> getUsers() {
+        log.info("访问了 getUsers 接口");
         List<User> users = userMapper.getAll();
         return users;
     }

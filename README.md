@@ -10,8 +10,6 @@
 4. JDBC API
 5. MyBatis Framework
 
-
-
 ### 步骤二：mysql 的 docker 镜像使用
 1.下载镜像：
 ```
@@ -31,7 +29,7 @@ $ docker exec -it yourContainerId或yourContainerName bash
 ```
 5.进入 mysql 命令行，会提示输入 root 用户的密码（即第2步骤配置的：root）
 ```
-$ mysql -u root -p
+$ mysql -uroot -proot
 ```
 6.即可进行 mysql 数据库的管理工作
 * 出处：https://hub.docker.com/_/mysql
@@ -95,6 +93,26 @@ mysql> select * from users;
 
 ### 步骤七：配置 devTools
 1. 参考：https://www.cnblogs.com/cag2050/p/7884745.html
+
+### 步骤八：配置缓存
+1.在pom.xml中引入cache依赖，添加如下内容：
+```
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-cache</artifactId>
+</dependency>
+```
+2.在Spring Boot主类 SpringbootApplication.java 中增加 @EnableCaching 注解开启缓存功能
+3.在数据访问接口中，增加缓存配置注解，如：
+```
+@CacheConfig(cacheNames = "users")
+public interface UserMapper {
+
+	@Cacheable
+	List<User> getAll();
+}
+```
+4.再执行单元测试：src/test/java/tk/mybatis/springboot/mapper/UserMapperTest.java 中的 testQuery，可以在控制台中看到只执行了一次数据库的读取操作；
 
 
 > 参考：
